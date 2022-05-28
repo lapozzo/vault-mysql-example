@@ -1,6 +1,6 @@
-# Hashicorp Vault
+# Hashicorp Vault MySql Dynamic Role Example
 
-Simple example with Hashicorp Vault and MySql Database with dynamic secret
+Simple example with Hashicorp Vault and MySql Database with dynamic role.
 
 
 # Requirements
@@ -91,7 +91,7 @@ python src/main.py
 
 # Some Understantings
 
-* Credential request uses the role path (e.g. vault read database/creds/my-role);
+* For a credential request, should use the vault role path (e.g. vault read database/creds/my-role);
 * In the dynamic mode, the engine removes the user from the database when the lease expires;
 * One lease is generated on every credentials request, they control the life of the dynamic credential;
 * In the static role type we should have a role already created in the database. In the dynamic type the engine is responsible for control the creation of users and leases;
